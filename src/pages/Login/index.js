@@ -14,7 +14,7 @@ class Login extends Component {
       },
       users: [],
       isError: false,
-      msg: "",
+      message: "",
     };
   }
 
@@ -63,7 +63,7 @@ class Login extends Component {
   };
 
   render() {
-    console.log(this.state.msg);
+    console.log(this.state.message);
     return (
       <Row>
         <Col sm={4} className="form__login">
@@ -72,7 +72,7 @@ class Login extends Component {
               <>
                 <Toast>
                   <Toast.Header closeButton={false}>
-                    <strong className="me-auto">Tickitz</strong>
+                    <strong className="me-auto">Checklist</strong>
                   </Toast.Header>
                   <Toast.Body>{this.state.msg}</Toast.Body>
                 </Toast>
