@@ -32,9 +32,7 @@ class Login extends Component {
     axios
       .post("login", this.state.form_input)
       .then((response) => {
-        this.props.GetUser().then((response) => {
-          localStorage.setItem(response.value.data.data[0]);
-        });
+        localStorage.setItem(response.value.data.data[0]);
         const token = response.data.data.token;
         const userId = response.data.data.id;
         localStorage.setItem("user_id", userId);
